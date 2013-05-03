@@ -1,29 +1,93 @@
 /**************************
  *        GLOBALS         *
  **************************/
+body {
+  font-family: 'Roboto Slab', serif;
+  color: #444;
+  margin: 0;
+  font-size: 80%;
+  background: transparent url(../images/satinweave.png) repeat;
+}
+
+a {
+  color: #444;
+}
+a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+img {
+  max-width: 100%;
+}
 
 
 /**************************
  *         HEADER         *
  **************************/
+.header {
+  background: #222;
+  color: white;
+  text-align: center;
+}
+.header h2 {
+  margin: 0;
+  padding: 0;
+}
 
 
 /**************************
  *       NAVIGATION       *
  **************************/
-.admin-menu #overlay-container {
-  margin-top: 20px; /* Fix for using admin_menu with the overlay. */
-}
 
 
 /**************************
  *        SIDEBARS        *
  **************************/
+.sidebar {
+  float: left;
+  width: 20%;
+  padding: 2%;
+  height: 100%;
+}
 
 
 /**************************
  *         CONTENT        *
  **************************/
+.container {
+  background: transparent url(../images/creampaper.png) repeat;
+  overflow: hidden;
+}
+.content {
+  float: right;
+  width: 72%;
+  padding: 2%;
+  background: transparent url(../images/debutdark.png) repeat;
+}
+.info {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  padding: 4%;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 20px;
+}
+.info a {
+  color: #222;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.masonry-item:hover .info {
+  background: white;
+  display: inline;
+  opacity: 0.8;
+}
 
 
 /**************************

@@ -12,25 +12,27 @@
   <?php print render($page['help']); ?>
 </div>
 
-<div class="sidebar">
-  <?php if ($site_name): ?>
-    <h1><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h1>
-  <?php endif; ?>
+<div class="container">
+  <div class="sidebar">
+    <?php if ($site_name): ?>
+      <h1><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h1>
+    <?php endif; ?>
 
-  <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
-    <h1><?php print $title; ?></h1>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
+    <?php print render($title_prefix); ?>
+    <?php if ($title): ?>
+      <h1><?php print $title; ?></h1>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
 
-  <?php print render($page['sidebar_first']); ?>
-</div>
+    <?php print render($page['sidebar_first']); ?>
+  </div>
 
-<div class="content">
-  <?php if ($tabs): ?>
-    <?php print render($tabs); ?>
-  <?php endif; ?>
-  <?php print render($page['content']) ?>
+  <div class="content">
+    <?php if ($tabs): ?>
+      <?php print render($tabs); ?>
+    <?php endif; ?>
+    <?php print render($page['content']) ?>
+  </div>
 </div>
 
 <div class="footer">

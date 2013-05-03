@@ -29,3 +29,5 @@ stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
 settings[clear_registry] = 0
+
+scripts[] = frugalzon.js
