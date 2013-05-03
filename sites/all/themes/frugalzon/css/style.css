@@ -1,13 +1,23 @@
 /**************************
  *        GLOBALS         *
  **************************/
+html {
+  height: 100%;
+  min-height: 100%;
+}
 body {
   font-family: 'Roboto Slab', serif;
   color: #444;
   margin: 0;
   font-size: 80%;
-  background: transparent url(../images/satinweave.png) repeat;
+  background: transparent url(../images/creampaper.png) repeat;
+  height: 100%;
+  min-height: 100%;
 }
+input {
+  font-family: 'Roboto Slab', serif;
+}
+input[type="text"], input[type="password"] { outline: none; } }
 
 a {
   color: #444;
@@ -21,6 +31,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 img {
   max-width: 100%;
+}
+h1.site-name {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+h1.site-name a {
+  text-decoration: none;
+  color: black;
+}
+h1.site-name a:hover {
+  border-bottom: 1px solid #c59d5e;
 }
 
 
@@ -51,6 +75,45 @@ img {
   width: 20%;
   padding: 2%;
   height: 100%;
+  text-align: center;
+}
+.sidebar h2 {
+  font-size: 22px;
+}
+.sidebar label,
+.sidebar input.form-submit {
+  display: none;
+}
+.sidebar input.form-text {
+  margin: 0 auto;
+  background: transparent;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  padding: 2% 3% 3%;
+  width: 94%;
+}
+.sidebar ul {
+  margin: 0;
+  padding: 20px 0 0;
+  margin: 0 auto;
+  list-style: none;
+}
+.sidebar ul li {
+  text-align: center;
+  padding: 5px 0;
+}
+.sidebar ul li a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+.sidebar ul li a:hover {
+  border-bottom: 1px solid #c59d5e;
+}
+.front h1.title {
+  display: none;
 }
 
 
@@ -77,8 +140,12 @@ img {
   color: #222;
   font-size: 20px;
 }
+.info h3 {
+  margin-top: 0;
+}
 .info a {
   color: #222;
+  text-decoration: none;
   display: block;
   height: 100%;
   width: 100%;
@@ -88,8 +155,40 @@ img {
   display: inline;
   opacity: 0.8;
 }
+.views-exposed-form .views-exposed-widget {
+  padding: 0;
+  float: none;
+}
 
 
 /**************************
  *         FOOTER         *
  **************************/
+
+/**************************
+ *         MOBILE         *
+ **************************/
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .sidebar,
+  .content {
+    float: none;
+    width: 100%;
+    padding: 3%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .sidebar ul {
+    display: none;
+  }
+  .info, .info a {
+    position: static;
+    display: block;
+    color: white;
+  }
+  .masonry-item:hover .info {
+    background: transparent;
+    display: block;
+    opacity: 1;
+  }
+}
+

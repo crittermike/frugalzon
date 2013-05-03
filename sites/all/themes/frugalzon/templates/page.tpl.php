@@ -1,7 +1,4 @@
 <div class="header">
-  <?php if ($site_slogan): ?>
-    <h2><?php print $site_slogan; ?></h2>
-  <?php endif; ?>
   <?php if ($page['header']): ?>
     <?php print render($page['header']); ?>
   <?php endif; ?>
@@ -15,12 +12,16 @@
 <div class="container">
   <div class="sidebar">
     <?php if ($site_name): ?>
-      <h1><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h1>
+      <h1 class="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h1>
+    <?php endif; ?>
+
+    <?php if ($site_slogan): ?>
+      <h2><?php print $site_slogan; ?></h2>
     <?php endif; ?>
 
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>
-      <h1><?php print $title; ?></h1>
+      <h1 class="title"><?php print $title; ?></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
 
